@@ -38,14 +38,14 @@ window.addEventListener("load", function () {
   // Menghapus elemen loading setelah jeda waktu tertentu
   var loaderimg = document.querySelector("#intro");
   var loader = document.querySelector(".intro");
+  document.body.style.overflow = "hidden";
 
   
   loader.addEventListener("animationend", function () {
-      setTimeout(function(){
-          loader.style.opacity = "0";
+      loader.style.opacity = "0";
           setTimeout(() => {
             loader.style.display = "none";
+            document.body.style.overflow = "visible";
           }, 1000);
-      }, 8000)
   });
 });
